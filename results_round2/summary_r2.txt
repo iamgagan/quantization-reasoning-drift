@@ -1,0 +1,40 @@
+==============================================================================
+ROUND 2 ANALYSIS  (N=500 MATH-500, 2 models x 2 precisions, single seed)
+==============================================================================
+
+[1] PER-CONFIGURATION SUMMARY
+  A_distilled  BF16   n=500 acc=0.776 loop=0.020 cap=0.056 mean_tok=4573
+  A_distilled  3-bit  n=500 acc=0.302 loop=0.598 cap=0.012 mean_tok=5331
+  B_RL         BF16   n=500 acc=0.838 loop=0.002 cap=0.008 mean_tok=3054
+  B_RL         3-bit  n=500 acc=0.462 loop=0.348 cap=0.026 mean_tok=5308
+
+[2] CO-PRIMARY ENDPOINT - loop rate (pre-registered)
+  A_distilled  BF16 0.020 -> 3-bit 0.598   (delta +0.578)
+  B_RL         BF16 0.002 -> 3-bit 0.348   (delta +0.346)
+  3-bit loop-rate difference A-B = +0.250  SE=0.0306  z=8.2  95% CI [+0.190, +0.310]
+
+[3] PRIMARY ENDPOINT - paired inflation difference A-B (pre-registered)
+  four-way-clean subset: n=162 of 500 problems (32%)
+  arm A inflation: mean +1174  median +628  sd 2668
+  arm B inflation: mean +1587  median +798  sd 2602
+  >>> PAIRED DIFFERENCE (A-B): mean -412 tokens
+  >>> 95% bootstrap CI (10k resamples, seed 0): [-997, +115]
+  >>> INCLUDES zero -> NULL RESULT under the pre-registered rule
+  >>> sign vs pilot (pilot A-B was +919, A inflating MORE): REVERSED sign
+  problems where A inflates more: 75/162
+
+[4] SECONDARY / EXPLORATORY (not pre-registered - labelled as such)
+  median paired difference: -302 tokens
+  Wilcoxon signed-rank (rank-based, robust to the heavy tail): W=5780, p=0.1698
+  WITH looped generations included (pilot-style metric, n=500):
+     arm A +757, arm B +2255, difference -1498, 95% CI [-1951, -1059]
+     -> comparison of [3] vs this line isolates how much of the pilot's
+        inflation effect was loop-collapse rather than longer reasoning.
+
+[5] HESITATION-MARKER DENSITY (per 1k tokens, four-way-clean subset)
+  A_distilled  BF16 11.07 -> 3-bit 15.70  (delta +4.63)
+  B_RL         BF16 12.70 -> 3-bit 24.64  (delta +11.94)
+
+[6] ACCURACY (all 500 per config)
+  A_distilled  0.776 -> 0.302  (delta -0.474)
+  B_RL         0.838 -> 0.462  (delta -0.376)

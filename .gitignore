@@ -1,0 +1,7 @@
+# model weights (multi-GB) — not redistributed
+models/
+# environments and caches
+.venv/
+__pycache__/
+*.pyc
+.DS_Store

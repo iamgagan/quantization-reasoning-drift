@@ -1,0 +1,13 @@
+ONLINE detector flag (as recorded during generation): A=0.598 B=0.348 diff=+0.250
+
+LOOP-DEFINITION SENSITIVITY (N=500 per config; offline recomputation on saved text)
+definition                        A 3bit  B 3bit     diff  A BF16  B BF16
+20-gram x4 trailing-600 (pre-reg)   0.598   0.348   +0.250   0.020   0.002
+20-gram x4 full text               0.604   0.362   +0.242   0.054   0.014
+10-gram x3 full text               0.786   0.636   +0.150   0.494   0.362
+15-gram x4 full text               0.640   0.422   +0.218   0.120   0.064
+20-gram x6 full text               0.246   0.148   +0.098   0.016   0.000
+30-gram x4 full text               0.196   0.130   +0.066   0.014   0.002
+30-gram x10 full text              0.064   0.058   +0.006   0.002   0.000
+40-gram x8 full text               0.058   0.056   +0.002   0.002   0.000
+30-gram x20 (Pipis et al.)         0.030   0.042   -0.012   0.002   0.000

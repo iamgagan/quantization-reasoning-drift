@@ -1,0 +1,50 @@
+[
+  {
+    "file": "dsr-3bit.jsonl",
+    "n": 50,
+    "accuracy": 0.52,
+    "mean_tokens": 5180.2,
+    "marker_per_1k": 29.59,
+    "truncated_frac": 0.32,
+    "loop_frac": 0.26,
+    "gold_in_trace_among_wrong": 0.333
+  },
+  {
+    "file": "dsr-bf16.jsonl",
+    "n": 50,
+    "accuracy": 0.8,
+    "mean_tokens": 2746.5,
+    "marker_per_1k": 17.93,
+    "truncated_frac": 0.04,
+    "loop_frac": 0.0,
+    "gold_in_trace_among_wrong": 0.4
+  },
+  {
+    "file": "r1d-3bit.jsonl",
+    "n": 50,
+    "accuracy": 0.32,
+    "mean_tokens": 6668.0,
+    "marker_per_1k": 18.86,
+    "truncated_frac": 0.64,
+    "loop_frac": 0.6,
+    "gold_in_trace_among_wrong": 0.618
+  },
+  {
+    "file": "r1d-bf16.jsonl",
+    "n": 50,
+    "accuracy": 0.78,
+    "mean_tokens": 3314.9,
+    "marker_per_1k": 12.89,
+    "truncated_frac": 0.12,
+    "loop_frac": 0.02,
+    "gold_in_trace_among_wrong": 0.545
+  }
+]
+r1d: CTIR=+101.2%  delta_marker_per_1k=+5.97  acc 0.780->0.320
+dsr: CTIR=+88.6%  delta_marker_per_1k=+11.66  acc 0.800->0.520
+
+Paired per-problem analysis (same 50 MATH-500 problems, bootstrap 10k resamples, seed 0):
+mean per-problem inflation: r1d=3353 tok, dsr=2434 tok
+mean difference (r1d - dsr): 919 tok, 95% CI [19, 1790]
+problems where r1d inflates more: 32/50; dsr more: 17/50
+truncation count amplification: r1d +26/50, dsr +14/50
