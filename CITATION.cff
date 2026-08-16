@@ -1,0 +1,28 @@
+cff-version: 1.2.0
+message: "If you use these artifacts, please cite the paper and/or this repository (see preferred-citation)."
+title: "Quantization-Induced Reasoning Drift: Experiment Artifacts"
+authors:
+  - family-names: "Singh"
+    given-names: "Gagandeep"
+    affiliation: "Independent Researcher"
+    email: "gagan.2492@gmail.com"
+repository-code: "https://github.com/iamgagan/quantization-reasoning-drift"
+license: MIT
+date-released: "2026-08-10"
+keywords:
+  - post-training quantization
+  - large reasoning models
+  - chain-of-thought
+  - overthinking
+  - distillation
+  - reinforcement learning
+  - pre-registered experiment
+preferred-citation:
+  type: unpublished
+  title: "Quantization-Induced Reasoning Drift: A Survey of Overthinking and Chain-of-Thought Inflation in Quantized Long-CoT Models, with a Pre-Registered Controlled Experiment"
+  authors:
+    - family-names: "Singh"
+      given-names: "Gagandeep"
+      affiliation: "Independent Researcher"
+  year: 2026
+  notes: "Preprint/DOI to be added once assigned (Zenodo)."

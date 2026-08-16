@@ -1,0 +1,32 @@
+{
+  "title": "Quantization-Induced Reasoning Drift: Experiment Artifacts (Pre-Registered N=500 Null Result)",
+  "description": "<p>Complete artifacts for a pre-registered controlled experiment testing whether RL post-training on top of distillation changes quantization-induced chain-of-thought inflation, relative to pure distillation, at matched 3-bit quantization.</p><p><strong>Headline: the pre-registered primary endpoint is a NULL</strong> (paired token-inflation difference &minus;412 tokens, 95% bootstrap CI [&minus;997, +115]), with sign opposite to the hypothesis and to an earlier 50-problem pilot. The co-primary endpoint (loop rate) is large (0.598 vs 0.348, z=8.2) but definition-dependent: it vanishes under a stricter prior loop definition (Pipis et al., arXiv:2512.12895).</p><p>Contents: pre-registration (<code>PLAN.md</code>, written before Round-2 execution), generation/analysis scripts, and 2,200 raw per-generation JSONL records (200 pilot + 2,000 Round-2) across DeepSeek-R1-Distill-Qwen-1.5B (pure SFT distillation) and DeepScaleR-1.5B-Preview (same base + RL), each at BF16 and 3-bit MLX group quantization, on all 500 MATH-500 problems.</p><p>Code: MIT license. Data (<code>results_pilot/</code>, <code>results_round2/</code>): CC BY 4.0. Problem statements are not redistributed; load from HuggingFaceH4/MATH-500.</p>",
+  "creators": [
+    {
+      "name": "Singh, Gagandeep",
+      "affiliation": "Independent Researcher"
+    }
+  ],
+  "license": "MIT",
+  "upload_type": "software",
+  "access_right": "open",
+  "keywords": [
+    "post-training quantization",
+    "large reasoning models",
+    "chain-of-thought",
+    "overthinking",
+    "distillation",
+    "reinforcement learning",
+    "pre-registered experiment",
+    "null result",
+    "MATH-500"
+  ],
+  "related_identifiers": [
+    {
+      "identifier": "https://github.com/iamgagan/quantization-reasoning-drift",
+      "relation": "isSupplementTo",
+      "resource_type": "publication-preprint"
+    }
+  ],
+  "notes": "Companion paper (survey + this experiment) archived separately on Zenodo as a preprint deposit; DOI to be added here once minted."
+}
