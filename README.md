@@ -1,5 +1,7 @@
 # Quantization-Induced Reasoning Drift — experiment artifacts
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.21971132.svg)](https://doi.org/10.5281/zenodo.21971132)
+
 Complete artifacts for the paper *"Quantization-Induced Reasoning Drift: A Survey of Overthinking and Chain-of-Thought Inflation in Quantized Long-CoT Models, with a Pre-Registered Controlled Experiment"* (Gagandeep Singh).
 
 **Headline: the pre-registered primary endpoint is a NULL**, with sign opposite to the hypothesis. That result, and the reasons an earlier 50-problem pilot reported the opposite, are the substance of the paper. Everything needed to check it is here.
